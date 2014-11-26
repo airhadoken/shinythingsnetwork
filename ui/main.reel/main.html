@@ -76,6 +76,7 @@
         "repetition": {
             "prototype": "montage/ui/repetition.reel",
             "properties": {
+                "element": {"#": "repetition"},
                 "content": [
                     "",
                     ""
@@ -85,24 +86,28 @@
         "slot": {
             "prototype": "montage/ui/slot.reel",
             "properties": {
+                "element": {"#": "slot"},
                 "content": {"@": "text"}
             }
         },
         "slot2": {
             "prototype": "montage/ui/slot.reel",
             "properties": {
+                "element": {"#": "slot2"},
                 "content": {"@": "text2"}
             }
         },
         "text": {
             "prototype": "montage/ui/text.reel",
             "properties": {
+                "element": {"#": "text"},
                 "value": "This is a thing I did"
             }
         },
         "text2": {
             "prototype": "montage/ui/text.reel",
             "properties": {
+                "element": {"#": "text2"},
                 "value": "Another thing I did"
             }
         },
@@ -127,7 +132,6 @@
                 <div data-montage-id="slot2">
                     <p data-montage-id="text2"></p>
                 </div>
-
             </div>
         </div>
     </div>
