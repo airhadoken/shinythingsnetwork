@@ -73,14 +73,27 @@
                 "crossOrigin": null
             }
         },
+        "rangeController": {
+            "prototype": "montage/core/range-controller",
+            "properties": {
+                "content": [
+                    "If music be the food of love, play on.",
+                    "O Romeo, Romeo! wherefore art thou Romeo?",
+                    "All that glitters is not gold.",
+                    "I am amazed and know not what to say."
+                ]
+            }
+        },
         "repetition": {
             "prototype": "montage/ui/repetition.reel",
             "properties": {
                 "element": {"#": "repetition"},
                 "content": [
-                    "",
-                    ""
-                ]
+                    "If music be the food of love, play on.",
+                    "O Romeo, Romeo! wherefore art thou Romeo?",
+                    "All that glitters is not gold.",
+                    "I am amazed and know not what to say."
+                    ]
             }
         },
         "slot": {
@@ -88,6 +101,36 @@
             "properties": {
                 "element": {"#": "slot"},
                 "content": {"@": "text2"}
+            }
+        },
+        "text-bar": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text-bar"},
+                "value": "bar"
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
+        "text-baz": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text-baz"},
+                "value": "baz"
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
+        "text-foo": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text-foo"},
+                "value": "foo"
+            },
+            "_dev": {
+                "isHidden": true
             }
         },
         "text2": {
@@ -111,17 +154,24 @@
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         https://work.montagestudio.com/app/fc63739848aee1a57efe7e7230971afdc3e41018/assets/icons/tag.png
         @slot2
+        @rangeController
         <h1 data-montage-id="title"></h1>
         @slot2
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="flow">
             @slot2
+            @rangeController
             <div data-montage-id="repetition">
                 <div data-montage-id="slot">
                     @slot2
                     <p data-montage-id="text2"></p>
                 </div>
             </div>
+            @rangeController
+            @rangeController
         </div>
+        <p data-montage-id="text-foo"></p>
+        <p data-montage-id="text-bar"></p>
+        <p data-montage-id="text-baz"></p>
     </div>
 </body>
 </html>
