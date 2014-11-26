@@ -28,6 +28,8 @@
                     ""
                 ],
                 "contentController": null,
+                "hasElasticScrolling": false,
+                "momentumDuration": "0",
                 "paths": [
                     {
                         "knots": [
@@ -64,7 +66,8 @@
                         "tailOffset": 0,
                         "units": {}
                     }
-                ]
+                ],
+                "stride": "0"
             }
         },
         "image": {
@@ -72,6 +75,16 @@
             "properties": {
                 "element": {"#": "image"},
                 "crossOrigin": null
+            }
+        },
+        "repetition": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "repetition"},
+                "content": [
+                    "",
+                    ""
+                ]
             }
         },
         "slot": {
@@ -125,6 +138,9 @@
             </div>
             <div></div>
         </div>
+        <ul data-montage-id="repetition">
+            <li></li>
+        </ul>
     </div>
 </body>
 </html>
