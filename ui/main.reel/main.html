@@ -70,14 +70,12 @@
         "image": {
             "prototype": "digit/ui/image.reel",
             "properties": {
-                "element": {"#": "image"},
                 "crossOrigin": null
             }
         },
         "repetition": {
             "prototype": "montage/ui/repetition.reel",
             "properties": {
-                "element": {"#": "repetition"},
                 "content": [
                     "",
                     ""
@@ -87,28 +85,24 @@
         "slot": {
             "prototype": "montage/ui/slot.reel",
             "properties": {
-                "element": {"#": "slot"},
                 "content": {"@": "text"}
             }
         },
         "slot2": {
             "prototype": "montage/ui/slot.reel",
             "properties": {
-                "element": {"#": "slot2"},
                 "content": {"@": "text2"}
             }
         },
         "text": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "text"},
                 "value": "This is a thing I did"
             }
         },
         "text2": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "text2"},
                 "value": "Another thing I did"
             }
         },
@@ -126,18 +120,8 @@
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <h1 data-montage-id="title"></h1>
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="flow">
-            <div data-montage-id="slot">
-                <p data-montage-id="text"></p>
-            </div>
-            <div data-montage-id="slot2">
-                <img data-montage-id="image">
-                <p data-montage-id="text2"></p>
-            </div>
-            <div></div>
+
         </div>
-        <ul data-montage-id="repetition">
-            <li></li>
-        </ul>
     </div>
 </body>
 </html>
