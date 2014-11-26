@@ -90,25 +90,11 @@
                 "content": {"@": "text"}
             }
         },
-        "slot2": {
-            "prototype": "montage/ui/slot.reel",
-            "properties": {
-                "element": {"#": "slot2"},
-                "content": {"@": "text2"}
-            }
-        },
         "text": {
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "text"},
                 "value": "@repetition:iteration.object"
-            }
-        },
-        "text2": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "text2"},
-                "value": "Another thing I did"
             }
         },
         "title": {
@@ -123,10 +109,15 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
+        https://work.montagestudio.com/app/fc63739848aee1a57efe7e7230971afdc3e41018/assets/icons/tag.png
+        @slot2
         <h1 data-montage-id="title"></h1>
+        @slot2
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="flow">
+            @slot2
             <div data-montage-id="repetition">
                 <div data-montage-id="slot">
+                    @slot2
                     <p data-montage-id="text"></p>
                 </div>
             </div>
