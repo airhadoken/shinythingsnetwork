@@ -13,6 +13,7 @@
                 "element": {"#": "main"}
             }
         },
+        "application": {},
         "flow": {
             "prototype": "montage/ui/flow.reel",
             "properties": {
@@ -22,6 +23,7 @@
                     0,
                     1500
                 ],
+                "contentController": {"@": "rangeController"},
                 "paths": [
                     {
                         "knots": [
@@ -61,6 +63,23 @@
                 ]
             }
         },
+        "image": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "image"},
+                "crossOrigin": null
+            }
+        },
+        "rangeController": {
+            "prototype": "montage/core/range-controller",
+            "properties": {
+                "content": [
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
         "slot": {
             "prototype": "montage/ui/slot.reel",
             "properties": {
@@ -86,17 +105,26 @@
                 "element": {"#": "text2"},
                 "value": "Another thing I did"
             }
+        },
+        "title": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Main Nav"
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <h1 data-montage-id="title"></h1>
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0" data-montage-id="flow">
             <div data-montage-id="slot">
                 <p data-montage-id="text"></p>
             </div>
             <div data-montage-id="slot2">
+                <img data-montage-id="image">
                 <p data-montage-id="text2"></p>
             </div>
             <div></div>
