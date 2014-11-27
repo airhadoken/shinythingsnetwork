@@ -10,6 +10,14 @@
       }
     }
   },
+  "blueprint_unnamed_content": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "content",
+      "blueprint": {"@": "root"},
+      "cardinality": -1
+    }
+  },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
@@ -18,8 +26,13 @@
         "%": "ui/main.reel/main.meta"
       },
       "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_content"}
+      ],
       "propertyBlueprintGroups": {
-        "Main": []
+        "Main": [
+          {"@": "blueprint_unnamed_content"}
+        ]
       },
       "module": {
         "%": "ui/main.reel"

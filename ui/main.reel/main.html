@@ -10,7 +10,12 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "main"}
+                "element": {"#": "main"},
+                "content": [
+                    "",
+                    "",
+                    ""
+                ]
             }
         },
         "application": {},
@@ -88,19 +93,15 @@
             "prototype": "montage/ui/repetition.reel",
             "properties": {
                 "element": {"#": "repetition"},
-                "content": [
-                    "If music be the food of love, play on.",
-                    "O Romeo, Romeo! wherefore art thou Romeo?",
-                    "All that glitters is not gold.",
-                    "I am amazed and know not what to say."
-                    ]
+                "content": [],
+                "contentController": {"@": "rangeController"}
             }
         },
         "slot": {
             "prototype": "montage/ui/slot.reel",
             "properties": {
                 "element": {"#": "slot"},
-                "content": {"@": "text2"}
+                "content": null
             }
         },
         "text-bar": {
@@ -137,7 +138,7 @@
             "prototype": "digit/ui/text.reel",
             "properties": {
                 "element": {"#": "text2"},
-                "value": "@repetition:iteration.object"
+                "value": "@owner:content"
             }
         },
         "title": {
@@ -161,10 +162,7 @@
             @slot2
             @rangeController
             <div data-montage-id="repetition">
-                <div data-montage-id="slot">
-                    @slot2
-                    <p data-montage-id="text2"></p>
-                </div>
+                <p data-montage-id="text2"></p>
             </div>
             @rangeController
             @rangeController
@@ -172,6 +170,9 @@
         <p data-montage-id="text-foo"></p>
         <p data-montage-id="text-bar"></p>
         <p data-montage-id="text-baz"></p>
+        <div data-montage-id="slot">
+            @slot2
+        </div>
     </div>
 </body>
 </html>
